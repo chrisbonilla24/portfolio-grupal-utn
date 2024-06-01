@@ -1,0 +1,143 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #F0ECE3;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+  background-color: #29363C;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80px;
+
+  .navigation {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+main {
+  .seccion {
+    margin: 5rem;
+  }
+
+  .sobre-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+    .logo img {
+      height: 300px;
+      border-radius: 100%;
+    }
+    .container-sobre-nosotros {
+      width: 50%;
+      line-height: 1.5;
+      font-size: 1.2rem;
+
+      h2, p {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  .experiencia {
+    .titulo_seccion {
+      font-size: 1.7rem;
+    }
+
+    .contenedor_cursos {
+      display: flex;
+      gap: 100px;
+
+      .cursos {
+        height: 200px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        
+        .titulo_cursos {
+          margin: 0;
+        }
+
+        .titulo_cursos a {
+          font-size: 1.4rem;
+          color: #29363C;
+          text-decoration: none;
+        }
+
+        .descripcion_cursos {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+  * {
+    transition: 0.5s ease;
+  }
+
+  body {
+    min-width: 400px;
+
+    header {
+      .navigation li a {
+        font-size: 1.4rem;
+      }
+    }
+
+    main {
+      .seccion {
+        margin: 2rem;
+      }
+
+      .sobre-nosotros {
+        flex-direction: column;
+        gap: 40px;
+
+        .logo img {
+          height: 250px;
+        }
+
+        .container-sobre-nosotros {
+          width: 100%;
+          font-size: 1.1rem;
+        }
+      }
+
+      .experiencia .contenedor_cursos {
+        flex-direction: column;
+        gap: 40px;
+
+        .cursos {
+          height: fit-content;
+          width: fit-content;
+
+          .titulo_cursos a {
+            font-size: 1.4rem;
+          }
+
+          .descripcion_cursos {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
